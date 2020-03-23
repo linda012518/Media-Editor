@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{34f803d5-e55d-484c-9584-155a41033ff6}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{f7f1ded5-3995-4fd6-ab70-7f4cb680f0ff}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{e31acf98-aa47-445d-bd79-909b0ea01da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\header">
+      <UniqueIdentifier>{488edb14-cad7-4529-abdd-3f07d8af9d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\cpp">
+      <UniqueIdentifier>{a147da0b-084e-45b9-879b-a7b968e026e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{96344c0a-91d6-4992-8243-90461494c41b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\header">
+      <UniqueIdentifier>{1695fb3d-af28-4bc0-8510-ec62494a5e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\cpp">
+      <UniqueIdentifier>{ff908e97-8ef5-4ee0-b0b7-7a112eb170fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\ffmpeg">
+      <UniqueIdentifier>{34210348-1ce1-47dd-a2df-2ee3fa1268de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\ffmpeg\header">
+      <UniqueIdentifier>{fa76c639-20da-46a8-9ad4-3dac3a993a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\ffmpeg\cpp">
+      <UniqueIdentifier>{21d4d2b9-8a2b-4b85-8bd8-10bc1425cdd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\audioprocessor">
+      <UniqueIdentifier>{4b2576e5-3e6e-429c-893a-803de454c6e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LYD_Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LYD_Player.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LYD_Player.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_LYD_Player.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SplitWindowLine.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SplitWindowLine.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CenterWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CenterWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CenterWindow.cpp">
+      <Filter>ui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitWindowLine.cpp">
+      <Filter>ui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GLContext.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OpenglWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OpenglWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenglWidget.cpp">
+      <Filter>ui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\depends\include\glew\glew.c">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="LydThread.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Semaphore.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Timestamp.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FFmpegUtilFunc.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="YUV420Shader.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Resample.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Decode.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioDevice.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioPlay.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Demux.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoPlay.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LydSlider.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LydSlider.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="LydSlider.cpp">
+      <Filter>ui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportShader.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderHeader.h">
+      <Filter>player\header</Filter>
+    </ClCompile>
+    <ClCompile Include="ContrastShader.cpp">
+      <Filter>player\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ContrastSlider.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ContrastSlider.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ContrastSlider.cpp">
+      <Filter>ui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\BPMDetect.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\cpu_detect_x86.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\FIFOSampleBuffer.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\FIRFilter.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\InterpolateCubic.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\InterpolateLinear.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\InterpolateShannon.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\mmx_optimized.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\PeakFinder.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\RateTransposer.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\SoundTouch.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\sse_optimized.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\TDStretch.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtouch\AAFilter.cpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordPlay.cpp">
+      <Filter>player\ffmpeg\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="LYD_Player.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LYD_Player.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LYD_Player.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CenterWindow.h">
+      <Filter>ui\header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SplitWindowLine.h">
+      <Filter>ui\header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OpenglWidget.h">
+      <Filter>ui\header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LydSlider.h">
+      <Filter>ui\header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ContrastSlider.h">
+      <Filter>ui\header</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_LYD_Player.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLContext.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="LydThread.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Semaphore.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Timestamp.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="FFmpegUtilFunc.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="YUV420Shader.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Resample.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Decode.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioDevice.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioPlay.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Demux.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoPlay.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportShader.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ContrastShader.h">
+      <Filter>player\header</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\AAFilter.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\BPMDetect.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\ByteConvertContext.hpp">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\cpu_detect.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\FIFOSampleBuffer.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\FIFOSamplePipe.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\FIRFilter.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\InterpolateCubic.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\InterpolateLinear.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\InterpolateShannon.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\PeakFinder.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\RateTransposer.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\SoundTouch.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\STTypes.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="soundtouch\TDStretch.h">
+      <Filter>player\audioprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>player\ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordPlay.h">
+      <Filter>player\ffmpeg\header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
