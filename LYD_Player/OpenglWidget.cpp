@@ -80,6 +80,8 @@ void OpenglWidget::render()
 		_videoPlay->render();
 		_contextRender.swapBuffer();
 	}
+
+	_contextRender.makeCurrentNull();
 }
 
 void OpenglWidget::resizeEvent(QResizeEvent *event)

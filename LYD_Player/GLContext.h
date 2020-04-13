@@ -26,6 +26,8 @@ namespace lyd
 
 		bool makeCurrent();
 
+		void makeCurrentNull();
+
 		bool shareContext(HGLRC rc);
 	};
 }

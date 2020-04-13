@@ -110,6 +110,11 @@ namespace lyd
 		return true;
 	}
 
+	void GLContext::makeCurrentNull()
+	{
+		wglMakeCurrent(NULL, NULL);
+	}
+
 	bool GLContext::shareContext(HGLRC rc)
 	{
 		return wglShareLists(rc, _hrc);
