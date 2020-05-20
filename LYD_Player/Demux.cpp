@@ -104,8 +104,8 @@ namespace lyd
 	bool Demux::exportVideo(const char * url) {
 		bool ret = _recordPlay.open(url);
 		if (!ret) return false;
-		seek(0);
 		_videoPlay.exportVideo();
+		seek(0);
 		_audioPlay.exportAudio();
 		setPause(false);
 		_recordPlay.start();

@@ -24,6 +24,7 @@ namespace lyd
 
 		_isExport		=	false;
 		_update			=	false;
+		_exportFinished =	false;
 
 		_exportShader	=	new ExportShader();
 		_exportShader->begin();
@@ -230,7 +231,7 @@ namespace lyd
 			shader->end();
 		}
 
-		if (_changeSpeed) pushRgb();
+		//if (_changeSpeed) pushRgb();
 
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		glBindTexture(GL_TEXTURE_2D, 0);
@@ -314,6 +315,66 @@ namespace lyd
 			switchFBO();
 
 			glBindVertexArray(0);
+		}
+
+		if (!_isExport)
+		{
+			while (true)
+			{
+				uint8_t* frame = popExportFrame();
+				if (!frame) break;
+
+				glBindVertexArray(YUV_VAO);
+
+				glBindTexture(GL_TEXTURE_2D, _yuvTex);
+				glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, _width, _height + _height / 2, GL_RED, GL_UNSIGNED_BYTE, frame);
+				delete frame;
+
+				glViewport(0, 0, _width, _height);
+				glBindFramebuffer(GL_FRAMEBUFFER, _currentFBO);
+
+				glClearColor(0.6, 0.6, 0.6, 1);
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空深度和颜色缓冲
+
+				if (_decodeShader)
+				{
+					_decodeShader->begin();
+					glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+					_decodeShader->end();
+				}
+				glBindFramebuffer(GL_FRAMEBUFFER, 0);
+				glBindTexture(GL_TEXTURE_2D, 0);
+				glBindVertexArray(0);
+
+
+				glBindVertexArray(VAO);
+				glViewport(0, 0, _width, _height);
+
+				for (auto itr = _shaderList.begin(); itr != _shaderList.end(); itr++)
+				{
+					switchFBO();
+
+					glBindFramebuffer(GL_FRAMEBUFFER, _currentFBO);
+
+					glClearColor(0.6, 0.6, 0.6, 1);
+					glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空深度和颜色缓冲
+					glBindTexture(GL_TEXTURE_2D, _currentColorBuffer);
+
+					Shader* shader = *itr;
+					shader->begin();
+					glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+					shader->end();
+				}
+				pushRgb();
+
+				glBindFramebuffer(GL_FRAMEBUFFER, 0);
+				glBindTexture(GL_TEXTURE_2D, 0);
+
+				switchFBO();
+
+				glBindVertexArray(0);
+			}
+			if (!_exportFinished) _exportFinished = true;
 		}
 	}
 
@@ -611,9 +672,9 @@ namespace lyd
 
 	void ImageProcess::pushRgb()
 	{
-		if (!_isExport) return;
+		//if (!_isExport) return;
 		std::lock_guard<std::mutex> lock(_mutexRgb);
-		if (!_isExport) return;
+		//if (!_isExport) return;
 		if (_rgbList.size() < 10)
 		{
 			char* rgb = new char[_width * _height * 3];
@@ -626,7 +687,7 @@ namespace lyd
 
 	RecordFrame* ImageProcess::popRgb()
 	{
-		if (!_isExport) return nullptr;
+		//if (!_isExport) return nullptr;
 		if (_rgbList.empty()) return nullptr;
 
 		std::lock_guard<std::mutex> lock(_mutexRgb);

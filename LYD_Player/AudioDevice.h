@@ -58,11 +58,9 @@ namespace lyd
 		inline void exportAudio() {
 			_isExport = true;
 		}
-		inline void exportOver() {
-			_isExport = false;
-		}
-		inline bool getExportState() {
-			return _isExport;
+		void exportOver();
+		inline bool getExportFinished() {
+			return !_isExport;
 		}
 
 		void clearExportBuffer();

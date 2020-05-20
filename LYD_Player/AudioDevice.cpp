@@ -220,7 +220,7 @@ namespace lyd
 	{
 		if (!_isExport) return;
 		std::lock_guard<std::mutex> lock(_mutexPcm);
-		if (!_isExport) return;
+		//if (!_isExport) return;
 
 		memcpy(_pcmBuffer + _lastPos, buf, size);
 		_lastPos += size;
@@ -238,15 +238,28 @@ namespace lyd
 		}
 	}
 
+	void AudioDevice::exportOver() 
+	{
+		if (!_isExport) return;
+		_isExport = false;
+
+		char* pcm = new char[_lastPos];
+		memcpy(pcm, _pcmBuffer, _lastPos);
+
+		RecordFrame* frame = new RecordFrame();
+		frame->data = pcm;
+		_pcmList.push_back(frame);
+		_lastPos = 0;
+	}
+
 	RecordFrame* AudioDevice::popPcm()
 	{
-		if (!_isExport) return nullptr;
+		//if (!_isExport) return nullptr;
 		if (_pcmList.empty()) return nullptr;
 
 		std::lock_guard<std::mutex> lock(_mutexPcm);
 		RecordFrame* pcm = _pcmList.front();
 		_pcmList.pop_front();
-
 		return pcm;
 	}
 }

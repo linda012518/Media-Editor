@@ -35,12 +35,13 @@ namespace lyd
 		RecordFrame* popRgb();
 		inline void exportVideo() {
 			_isExport = true;
+			_exportFinished = false;
 		}
 		inline void exportOver() {
 			_isExport = false;
 		}
-		inline bool getExportState() {
-			return _isExport;
+		inline bool getExportFinished() {
+			return _exportFinished;
 		}
 
 		void clearExportBuffer();
@@ -101,6 +102,7 @@ namespace lyd
 
 		bool		_update;
 		bool		_isExport;
+		bool		_exportFinished;
 		bool		_changeSpeed;
 
 	};

@@ -528,7 +528,7 @@ namespace lyd
 				}
 			}
 
-			if (!_videoDevice->getExportState() && !_audioDevice->getExportState()) stop();
+			if (_videoDevice->getExportFinished() && _audioDevice->getExportFinished()) stop();
 			if (_isOver && vOver && aOver)
 			{
 				while (true)
