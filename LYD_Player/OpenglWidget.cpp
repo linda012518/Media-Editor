@@ -81,7 +81,7 @@ void OpenglWidget::render()
 		_contextRender.swapBuffer();
 	}
 
-	_contextRender.makeCurrentNull();
+	_contextRender.makeCurrentNull();//退出一定要清空，要不然再为会黑屏
 }
 
 void OpenglWidget::resizeEvent(QResizeEvent *event)
